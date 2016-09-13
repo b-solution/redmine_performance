@@ -9,7 +9,6 @@ module  RedminePerf
         base.send(:include, InstanceMethods)
         base.class_eval do
           class<< self
-            # alias_method_chain :visible, :perf
           end
 
           scope :visible, lambda {|*args|
